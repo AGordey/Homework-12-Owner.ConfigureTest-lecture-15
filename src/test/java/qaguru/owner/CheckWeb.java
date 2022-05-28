@@ -9,6 +9,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class CheckWeb {
 
+    // Тест проходит т.к объявляют  "LocalOrSelenoid" = "Local"
     @Test
     @DisplayName("Считывание с данными для локального запуска")
     public void TestingLocalWeb() {
@@ -20,7 +21,7 @@ public class CheckWeb {
         assertThat(config.version()).isEqualTo("101");
         assertThat(config.host()).isEqualTo("https://localhost:4444/wd/hub");
     }
-
+    // Тест проходит т.к объявляют  "LocalOrSelenoid" = "Selenoid"
     @Test
     @DisplayName("Считывание с данными для удаленного запуска")
     public void TestingRemoteWeb() {

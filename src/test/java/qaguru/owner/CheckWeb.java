@@ -11,7 +11,7 @@ public class CheckWeb {
 
     @Test
     @DisplayName("Считывание с данными для локального запуска")
-    public void TestingLocalWeb () {
+    public void TestingLocalWeb() {
         System.setProperty("LocalOrSelenoid", "Local");
         WEB config = ConfigFactory
                 .create(WEB.class, System.getProperties());
@@ -32,9 +32,5 @@ public class CheckWeb {
         assertThat(config.version()).isEqualTo("100");
         assertThat(config.host()).isEqualTo("https://user1:1234@selenoid.autotests.cloud/wd/hub/");
     }
-
 }
-//browser.name=Chrome
-//        browser.version=100
-//        host=https://user1:1234@selenoid.autotests.cloud/wd/hub/
 
